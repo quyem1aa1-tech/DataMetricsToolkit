@@ -1,6 +1,21 @@
 cmake_minimum_required(VERSION 3.20)
-project(DataMetricsToolkit VERSION 1.0.0 LANGUAGES CXX)
+project(DataMetricsToolkit CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_subdirectory(libs)
+add_subdirectory(app)
+
+option(BUILD_TESTING "Build the test suite" ON)
+
+if(BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
 
 message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
 
-
+    
