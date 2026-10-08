@@ -1,7 +1,13 @@
 # CMake build artifacts
 build/
+.cache/
+*.o
+*.a
+*.so
 bin/
 lib/
+
+# File tạm sinh ra bởi CMake
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
@@ -12,3 +18,8 @@ Makefile
 .idea/
 compile_commands.json
 *.swp
+
+# Ninja build artifacts
+build.ninja
+.ninja_deps
+.ninja_log
