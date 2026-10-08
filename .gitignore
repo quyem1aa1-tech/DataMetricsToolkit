@@ -1,0 +1,14 @@
+# CMake build artifacts
+build/
+bin/
+lib/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# IDE & Tooling
+.vscode/
+.idea/
+compile_commands.json
+*.swp
