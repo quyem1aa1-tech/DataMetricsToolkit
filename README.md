@@ -14,26 +14,12 @@ A modular C++ command-line utility for statistical data analysis and benchmarkin
 
 ## Directory Overview
 ```text
-DataMetrics-Toolkit/
-├── CMakeLists.txt              # Root
-├── libs/
-│   ├── logger/                 # Module to write log
-│   │   ├── CMakeLists.txt
-│   │   ├── include/logger/
-│   │   │   └── logger.h
-│   │   └── src/logger.cpp
-│   └── stats/                  # Module calculation
-│   │   ├── CMakeLists.txt
-│   │   ├── include/stats/
-│   │   │   └── stats.h
-│   │   └── src/stats.cpp
-│   └── formatter/
-│       ├── CMakeLists.txt
-│       ├── include/formatter/
-│       │   └── formatter.hpp
-│       └── src/formatter.cpp
-├── tests/ ...                  # Learn how to use GTest
-└── app/                        # include 2 modules 
-    ├── CMakeLists.txt
-    └── main.cpp
+DataMetricsToolkit/
+├── cmake/             # CMake helpers & toolchain configs
+├── libs/              # Internal modular libraries
+│   ├── logger/        # Structured logging engine
+│   ├── stats/         # Statistical compute core
+│   └── formatter/     # Output formatting utilities
+├── app/               # Application entry point / CLI driver
+└── tests/             # Unit tests suite (GoogleTest)
 ```
