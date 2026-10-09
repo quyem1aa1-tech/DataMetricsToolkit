@@ -23,3 +23,32 @@ DataMetricsToolkit/
 ├── app/               # Application entry point / CLI driver
 └── tests/             # Unit tests suite (GoogleTest)
 ```
+
+## Quick Start
+
+### Prerequisites
+* **Compiler:** C++17 compliant
+* **Build System:** CMake 3.20+
+* **Testing:** GoogleTest (fetched automatically via CMake if configured)
+
+### 1. Build
+```bash
+# Configure build tree
+cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+
+# Compile all targets
+cmake --build build
+```
+### 2. Run Application
+```bash
+# On Linux / macOS:
+.build/app/datametrics
+
+# On Windows:
+.\build\app\Release\datametrics.exe
+```
+
+### 3. Run Unit Tests
+```bash
+ctest --test-dir build --output-on-failure
+```
